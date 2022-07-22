@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/insert.css">
+    <title>Document</title>
+</head>
+<body>
+  <div class="navigation">
+    <div id="uti">
+      <nav class="navs nav-uti">
+      <button type="buttons" class="nav-closes" onclick="toggleNavUti()">
+        <ion-icon name="close-outline" size="large"></ion-icon>
+      </button>
+      <div class="nav-links-containers">
+        <a href="#" class="nav__links">
+          <span class="nav__texts">Liste complete des Etudiants</span>
+        </a>
+        <a href="./RechercheEtudiant.html" class="nav__links">
+          <span class="nav__texts">Rechercher d'un Etudiant</span>
+        </a>
+        <a href="#" class="nav__links">
+          <span class="nav__texts">Liste complete des departements</span>
+        </a>
+        <a href="#" class="nav__links">
+          <span class="nav__texts">Rechercher d'un departement</span>
+        </a>
+        <a href="#" class="nav__links">
+          <span class="nav__texts">Liste complete des fillieres</span>
+        </a>
+        <a href="#" class="nav__links">
+          <span class="nav__texts">Rechercher d'une filliere</span>
+        </a>
+      </div>
+    </nav>
+  </div>
+  <div id="admin">
+      <nav class="navs nav-admin">
+      <button type="button" class="nav-closes" onclick="toggleNav()">
+        <ion-icon name="close-outline" size="large"></ion-icon>
+      </button>
+      <div class="nav-links-containers">
+        <a href="./InsertEtudiant.html" class="nav__links">
+          <span class="nav__texts">Insertion d'un nouvel etudiant</span>
+        </a>
+        <a href="./InsertDepartement.html" class="nav__links">
+          <span class="nav__texts">Insertion d'un nouveau departement</span>
+        </a>
+        <a href="./InsertFilliere.html" class="nav__links">
+          <span class="nav__texts">Insertion d'une nouvelle filliere</span>
+        </a>
+      </div>
+    </nav>
+  </div>
+  <main class="mains">
+    <button class="btn-navs" onclick="toggleNavUti()">Utilisateur Navigation</button>
+      <button class="btn-navs" onclick="toggleNav()">Admin Navigation</button>
+  </main>
+  </div>
+  <div class="container">
+    <header>Ajouter un Etudiant</header>
+
+    <form action="#">
+        <div class="form first">
+            <div class="details personal">
+                <span class="title">Information Personnelle</span>
+
+                <div class="fields">
+                    <div class="input-field">
+                        <label>CNE</label>
+                        <input type="number" placeholder="Entrer votre CNE" required>
+                    </div>
+
+                    <div class="input-field">
+                        <label>NOM</label>
+                        <input type="text" placeholder="Entrer votre nom" required>
+                    </div>
+
+                    <div class="input-field">
+                        <label>PRENOM</label>
+                        <input type="text" placeholder="Enter votre prenom" required>
+                    </div>
+
+                    <div class="input-field">
+                        <label>FILLIERE</label>
+                        <select required>
+                            <option disabled selected>Selectionner filliere</option>
+                            <option>Male</option>
+                            <option>Female</option>
+                            <option>Others</option>
+                        </select>
+                    </div>
+                    <div class="input-field">
+                        <label>DEPARTEMENT</label>
+                        <select required>
+                            <option disabled selected>Selectionner Departement</option>
+                            <option>Male</option>
+                            <option>Female</option>
+                            <option>Others</option>
+                        </select>
+                    </div>
+
+                    <div class="input-field">
+                        <label>TELEPHONE</label>
+                        <input type="tel" placeholder="Entrer votre telephone" required>
+                    </div>
+                </div>
+            </div>
+
+            
+
+                <button class="nextBtn">
+                    <span class="btnText">Ajouter   </span>
+                    <i class="uil uil-navigator"></i>
+                </button>
+            </div> 
+        </div>
+        </form>
+</div>
+      <script>
+        function toggleNavUti() {
+          document.getElementById('uti').classList.toggle("nav-open");
+          document.getElementById('admin').classList.remove("nav-open");
+        }
+        function toggleNav() {
+          document.getElementById('admin').classList.toggle("nav-open");
+          document.getElementById('uti').classList.remove("nav-open");
+        }
+      </script>
+      <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+      <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+      <script src="../JS/insert.js"></script>
+</body>
+</html>
